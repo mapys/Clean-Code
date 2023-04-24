@@ -14,7 +14,7 @@ function renderPageWithSetupsAndTeardowns($pageData,$isSuite)
             includeTeardownPages($testPage, $newPageContent, $isSuite);
             $pageData->setContent($newPageContent->toString());
         }
-        return $pageData.getHtml();
+        return $pageData->getHtml();
     }catch(Exception $e){
         return $e->getMessage();
     }
